@@ -5,7 +5,7 @@ def size_folder(folder):
     total_size = 0
     for root, dirs, files in os.walk(folder):
         for f in files:
-            file_path = os.path.join(root, f)            
+            file_path = os.path.join(root, f)
             if not os.path.islink(file_path):
                 total_size += os.path.getsize(file_path)
     return total_size/1000000
